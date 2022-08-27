@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KMT Web Development</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="assets/images/Group-5.png" type="image/png">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="assets/images/Group-5.png" alt="" class="kmd-img">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="#" class="logo"><img src="assets/images/Group-5.png" alt="" class="kmd-img"></a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#home" class="navbar-link" data-nav-link>О нас</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#service" class="navbar-link" data-nav-link>Услуги</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#feature" class="navbar-link" data-nav-link>Особенности</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#project" class="navbar-link" data-nav-link>Проекты</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#blog" class="navbar-link" data-nav-link>Блог</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <a href="#" class="btn btn-primary has-before has-after">Давай пообщаемся 👋</a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" id="home" aria-label="hero">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h1 class="h1 hero-title">
+              Разрабатываем <span class="has-before">Эффектные</span>
+              Сайты и Лендинги
+            </h1>
+
+            <p class="hero-text">
+              Разработаем проект с нуля, доработаем текущий проект или усилим вашу ИТ-команду лучшими разработчиками на рынке
+            </p>
+
+            <div class="wrapper">
+              <a href="#" class="btn btn-primary has-before has-after">Как можно заказать</a>
+
+              <button class="hero-btn" aria-label="pixology promo">
+                <ion-icon name="play-outline" aria-hidden="true"></ion-icon>
+
+                <span class="span">За Кулисами </span>
+              </button>
+            </div>
+
+            <ul class="social-list">
+
+              <li>
+                <a href="#" class="social-link" style="--color: hsl(241, 77%, 63%);">
+                  <ion-icon name="logo-facebook"></ion-icon>
+
+                  <span class="span">Facebook</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link" style="--color: hsl(0, 100%, 50%);">
+                  <ion-icon name="logo-youtube"></ion-icon>
+
+                  <span class="span">Youtube</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link" style="--color: hsl(203, 89%, 53%);">
+                  <ion-icon name="logo-twitter"></ion-icon>
+
+                  <span class="span">Twitter</span>
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <figure class="hero-banner">
+            <img src="./assets/images/Group-5.png" width="794" height="637" alt="hero banner" class="w-100">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
