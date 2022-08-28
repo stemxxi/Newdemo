@@ -16,6 +16,9 @@
 
 :root {
 
+
+  
+
   /**
    * colors
    */
@@ -100,6 +103,89 @@
 
 }
 
+
+
+/* EXTRA COLORS */
+:root {
+
+  /**
+   * colors
+   */
+
+  --safety-orange: hsl(25, 100%, 50%);
+  --lavender-gray: hsl(230, 19%, 81%);
+  --persian-rose: hsl(328, 100%, 59%);
+  --red-crayola: hsl(341, 100%, 49%);
+  --eerie-black: hsl(240, 6%, 10%);
+  --light-gray: hsl(0, 0%, 80%);
+  --cultured-2: hsl(210, 60%, 98%);
+  --platinum: hsl(0, 0%, 90%);
+  --gray-web: hsl(220, 5%, 49%);
+  --cultured: hsl(0, 0%, 93%);
+  --black_10: hsla(0, 0%, 0%, 0.1);
+  --black_5: hsla(0, 0%, 0%, 0.05);
+  --white-1: hsl(0, 0%, 100%);
+  --white-2: hsl(0, 14%, 98%);
+  --black: hsl(0, 0%, 0%);
+
+  /**
+   * gradient color
+   */
+
+  --gradient: linear-gradient(to left top, var(--persian-rose), var(--safety-orange));
+
+  /**
+   * typography
+   */
+
+  --ff-roboto: 'Roboto', sans-serif;
+  --ff-league-spartan: 'League Spartan', sans-serif;
+
+  --fs-1: 3.5rem;
+  --fs-2: 3rem;
+  --fs-3: 2.1rem;
+  --fs-4: 1.7rem;
+  --fs-5: 1.4rem;
+  --fs-6: 1.3rem;
+
+  --fw-700: 700;
+  --fw-500: 500;
+
+  /**
+   * spacing
+   */
+
+  --section-padding: 60px;
+
+  /**
+   * shadow
+   */
+
+  --shadow-1: 0 6px 24px var(--black_5);
+  --shadow-2: 0 2px 28px var(--black_10);
+
+  /**
+   * border radius
+   */
+
+  --radius-2: 2px;
+  --radius-5: 5px;
+  --radius-8: 8px;
+
+  /**
+   * transition
+   */
+
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
+  --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+
+}
+
+
+
+
+/* EXTRA COLOR ENDS */
 
 
 
@@ -312,6 +398,12 @@ body {
 .grid-list {
   display: grid;
   gap: 30px;
+  grid-template-rows: 420px 350px;
+}
+
+.grid-extra-list {
+  display: grid;
+  grid-template-rows: 420px 0px !important;
 }
 
 .img-holder {
@@ -517,68 +609,34 @@ body {
   #SERVICE
 \*-----------------------------------*/
 
-.service { background-color: var(--ghost-white); }
+.service { background-color: var(--white-2); }
 
-.service .section-title { margin-block: 30px 60px; }
-
-.service-card,
-.service .link-card {
-  padding: 45px;
-  border-radius: var(--radius-20);
-}
+.service .section-text { margin-block: 5px 35px; }
 
 .service-card {
-  height: 100%;
-  background-color: var(--white);
-  padding-block-end: 40px;
-  border-block-end: 3px solid transparent;
-  box-shadow: var(--shadow-3);
-  transition: var(--transition-1);
-}
-
-.service-card:is(:hover, :focus-within) { border-color: hsl(var(--color)); }
-
-.service-card .card-icon {
-  max-width: max-content;
-  padding: 15px;
-  border-radius: var(--radius-8);
-  background-color: hsla(var(--color), 0.15);
-  margin-block-end: 25px;
+  background-color: var(--white-1);
+  padding: 20px 15px;
+  border: 1px solid var(--platinum);
+  border-radius: var(--radius-5);
+  text-align: center;
+  box-shadow: var(--shadow-1);
   transition: var(--transition-2);
 }
 
-.service-card:is(:hover, :focus-within) .card-icon { transform: rotateY(0.5turn); }
+.service-card:is(:hover, :focus-within) { transform: translateY(-10px); }
 
-.service-card .card-title { transition: var(--transition-1); }
-
-.service-card .card-title:is(:hover, :focus-within) { color: hsl(var(--color)); }
-
-.service .link-card {
-  background-color: hsla(var(--color), 0.15);
-  text-align: center;
+.service-card .card-icon {
+  color: var(--white-1);
+  font-size: 25px;
+  max-width: max-content;
+  margin-inline: auto;
+  padding: 18px;
+  border-radius: 50%;
 }
 
-.service .link-card .span {
-  color: var(--raisin-black-1);
-  font-size: var(--fs-6);
-  font-weight: var(--fw-500);
-  margin-block-end: 20px;
-  transition: var(--transition-1);
-}
+.service-card .card-title { margin-block: 20px 8px; }
 
-.service .link-card:is(:hover, :focus) .span { color: var(--majorelle-blue); }
-
-.service .link-card ion-icon {
-  color: var(--majorelle-blue);
-  font-size: 150px;
-  transform: rotate(-45deg);
-  margin: -25px auto;
-  transition: var(--transition-1);
-}
-
-.service .link-card:is(:hover, :focus) ion-icon { color: hsl(var(--color)); }
-
-
+.service-card .card-text { font-size: var(--fs-6); }
 
 
 
@@ -961,11 +1019,23 @@ body {
  * responsive for large than 575px screen
  */
 
+ @media (min-width: 320px) { 
+  
+  .hero-banner{
+    display: none;
+  }
+
+ }
+
 @media (min-width: 575px) {
 
   /**
    * REUSED STYLE
    */
+
+   .hero-banner{
+    display: none;
+  }
 
   .container {
     max-width: 540px;
@@ -973,6 +1043,9 @@ body {
     margin-inline: auto;
   }
 
+  .grid-list{
+    grid-template-rows: 350px 350px;
+  }
 
 
   /**
@@ -1045,7 +1118,8 @@ body {
 
   .btn { height: 60px; }
 
-  .grid-list { grid-template-columns: 1fr 1fr; }
+  .grid-list { grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 420px 350px;}
 
 
 
@@ -1081,6 +1155,10 @@ body {
   .hero .social-link:is(:hover, :focus) {
     background: unset;
     color: var(--color);
+  }
+
+  .hero-banner{
+    display: none;
   }
 
   .hero .social-link:is(:hover, :focus) .span { color: var(--color); }
@@ -1184,8 +1262,16 @@ body {
 
   .btn { height: 70px; }
 
-  .grid-list { grid-template-columns: repeat(3, 1fr); }
+  .grid-list { grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: 480px 350px;}
+  .grid-extra-list {
+      display: grid;
+      grid-template-rows: 480px 0px !important;
+    }
 
+    .hero-banner{
+      display: block;
+    }
 
 
   /**
@@ -1263,6 +1349,10 @@ body {
   .hero-banner { margin-inline-end: -140px; }
 
 
+
+  .service-card { padding: 20px; }
+
+  .service-card .h3 { --fs-3: 2.3rem; }
 
   /**
    * FEATURE
@@ -1368,6 +1458,15 @@ body {
  */
 
 @media (min-width: 1200px) {
+  
+
+  
+
+  .grid-extra-list {
+    display: grid;
+    grid-template-rows: 420px 0px !important;
+  }
+  
 
   /**
    * CUSTOM PROPERTY
@@ -1397,8 +1496,9 @@ body {
     margin-inline: auto;
   }
 
-
-
+  
+  
+  
   /**
    * HEADER
    */
@@ -1434,9 +1534,11 @@ body {
    * SERVICE
    */
 
-  .service .grid-list { grid-template-columns: repeat(4, 1fr); }
+  .service .grid-list { grid-template-columns: repeat(3, 2fr); 
+    grid-template-rows: 420px 350px;}
 
   .service-card .h3 { --fs-3: 2rem; }
+   
 
 
 
@@ -1478,4 +1580,25 @@ body {
 .kmd-img{
   max-width: 100px;
   width: 100%;
+}
+
+.service_title-text{
+  text-align: center;
+}
+
+.price-text{
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.price-som{
+  color: var(--raisin-black-1);
+  font-family: var(--ff-roboto);
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.grid-extra-list{
+  display: grid;
+  grid-template-rows: 350px 350px;
 }
