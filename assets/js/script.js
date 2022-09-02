@@ -61,3 +61,42 @@ const headerActive = function () {
 }
 
 addEventOnElem(window, "scroll", headerActive);
+
+
+
+
+// POP UP
+
+document.addEventListener('DOMContentLoaded', function(){
+  const modals = document.querySelectorAll('[data-modal]'),
+        modalsWrap = document.querySelectorAll('.modal-wrap'),
+        modalsClose = document.querySelectorAll('.modal__close');
+  
+  // open modal
+  modals.forEach((el) => {
+    el.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const modalToOpen = this.getAttribute('data-modal');
+      document.getElementById(modalToOpen).classList.remove('modal-wrap_hidden');
+    });
+  });
+  
+  // close modal
+  modalsClose.forEach((el) => {
+    el.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      this.closest('.modal-wrap').classList.add('modal-wrap_hidden');
+    });
+  });
+  modalsWrap.forEach((el) => {
+    el.addEventListener('mouseup', function(e){
+      const container = this.querySelector('.modal');
+      
+      if(e.target !== container && container.contains(e.target) === false){
+        this.classList.add('modal-wrap_hidden');
+      }
+    });
+  });
+});
