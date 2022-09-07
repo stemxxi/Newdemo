@@ -120,3 +120,8 @@ document.addEventListener('DOMContentLoaded', function(){
  }
  
  addEventOnElem(filterBtns, "click", filter);
+
+
+
+//  EXTRA
+
