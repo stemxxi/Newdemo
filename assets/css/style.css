@@ -1009,7 +1009,7 @@ body {
   right: 0;
   width: 100%;
   height: 10px;
-  background-image: var(--gradient);
+  /* background-image: var(--gradient); */
 }
 
 
